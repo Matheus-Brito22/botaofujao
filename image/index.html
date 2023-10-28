@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita ai</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    body{
+        background-color: #8f1b1b;
+        
+    }
+    .container{
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items:center; 
+        }
+
+        .pedido{
+        background-color: #fff;
+        width: 720px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 8px 8px 0px 0px #00000048;
+        }
+
+
+       h1, h2{
+            font-family: 'Agbalumo', sans-serif;
+            padding: 8px;
+        }
+
+        img{
+            height: 240px;
+        }
+
+        button{
+            background-color: rgb(223, 8, 8);
+            color: #fff;
+            font-weight: bold;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-top: 10px;   
+        }
+
+        #nao{
+            position: absolute;
+        }
+
+        button:hover{
+            background-color: #b41919;
+        }
+</style>
+
+<body>
+    
+    <div class="container">
+        <div class="pedido">
+          <h1>Não é seu aniversário, mas ta de parabéns</h1>
+            <img src="love.gif" alt="love">
+            <h2>
+                Eai, me da o c#?
+            </h2>
+            
+                <button id="sim" onclick="aceitou()">Sim</button>
+                <button id="nao" onmouseover="fugir()">Não</button>
+          
+    </div>
+
+ <script>
+    function fugir(){
+        var botaoNao = document.getElementById('nao');
+
+        var largura = window.innerWidth;
+        var altura = window.innerHeight;
+
+        var maxX = largura - botaoNao.offsetWidth;
+        var maxY = altura - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random()*maxX);
+        var aleatorioY = Math.floor(Math.random()*maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+
+        }   
+
+        function aceitou(){
+            window.alert("Te pego hj! TE AMO S2")
+
+        }
+    
+</script>
+</body>
+
+
+</html>
